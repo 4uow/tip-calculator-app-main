@@ -81,16 +81,18 @@ fieldset {
     border-radius: 0.5rem;
     padding: 0.5rem 0;
     cursor: pointer;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    font-weight: 500;
 
 }
 
 .tip-options #tip-custom {
     width: 100%;
     border: none;
-    background-color: hsl(185, 41%, 84%);
+    background-color: hsl(189, 47%, 97%);
     border-radius: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
     color: hsl(183, 100%, 15%);
     padding: 0.5rem 0;
     outline: none;
@@ -124,27 +126,64 @@ fieldset {
     border-radius: 0.3125rem;
     display: block;
     width: 100%;
+    border: none;
+    padding: 0.5rem 0;
+
 }
 
 .results {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     align-items: stretch;
     background-color: hsl(183, 100%, 15%);
     border-radius: 0.625rem;
-    padding: 2rem;
+    padding: 1.25rem;
     flex: 1 1 0;
 }
 
 .result-row {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+
+.result-row > p{
+    color: hsl(0, 100%, 100%);
+    font-size: 0.75rem;
 }
 
 .light-font {
+    display: block;
+    color: hsl(184, 14%, 56%);
+    font-size: 0.625rem;
+
+}
+
+.result-row > output {
+    color: hsl(172, 67%, 45%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#reset {
+    background-color: #9FE8DF;
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 0;
+    font-size: 0.8rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.title {
+    font-size: 0.8rem;
+    color: hsl(184, 14%, 56%);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
     display: block;
 }
