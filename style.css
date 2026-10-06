@@ -208,7 +208,7 @@ fieldset {
     font-weight: 700;
 }
 
-#reset {
+#reset:disabled  {
     background-color: #0C686D;
     color: #035C62;
     border: none;
@@ -220,7 +220,7 @@ fieldset {
     margin-top: auto;
 }
 
-#reset :active {
+#reset{
     background-color: #9FE8DF;
     color: hsl(183, 100%, 15%);
     border: none;
