@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-   <script src="scriptbymyself.js" defer></script>
+   <script src="script.js" defer></script>
 </head>
 <body>
   <div class="logo">
@@ -28,34 +28,38 @@
         <div>
           <label for="bill" class="title">Bill</label>
           <div class="input-wrapper">
-            <img src="images/icon-dollar.svg" alt="Dollar">
-            <input type="number" id="bill" placeholder="0" min="0" step="0.01" required>
+            <img src="images/icon-dollar.svg" alt="">
+            <input type="number" id="bill" placeholder="0" min="0" step="0.01" required aria-label="Enter bill amount">
           </div>
         </div>
         <fieldset>
           <legend class="title"> Select Tip %</legend>
           <div class="tip-options">
             <label for="tip-5">
-              <input type="radio" name="tip" value="5" id="tip-5">
+              <input type="radio" name="tip" value="5" id="tip-5" aria-label="5% tip">
               <span>5%</span>
             </label>
             <label for="tip-10">
-              <input type="radio" name="tip" value="10" id="tip-10">
+              <input type="radio" name="tip" value="10" id="tip-10"
+              aria-label="10% tip">
               <span>10%</span>
             </label>
             <label for="tip-15">
-              <input type="radio" name="tip" value="15" id="tip-15">
+              <input type="radio" name="tip" value="15" id="tip-15"
+              aria-label="15% tip">
               <span>15%</span>
             </label>
             <label for="tip-25">
-              <input type="radio" name="tip" value="25" id="tip-25">
+              <input type="radio" name="tip" value="25" id="tip-25"
+              aria-label="25% tip">
               <span>25%</span>
             </label>
             <label for="tip-50">
-              <input type="radio" name="tip" value="50" id="tip-50">
+              <input type="radio" name="tip" value="50" id="tip-50"
+              aria-label="50% tip">
               <span>50%</span>
             </label>
-            <input type="number" name="tip" min="0" step="0.01" placeholder="Custom" id="tip-custom">
+            <input type="number" name="tip" min="0" step="0.01" placeholder="Custom" id="tip-custom" aria-label="Custom tip percentage">
           </div>
           
           </fieldset>
@@ -64,7 +68,7 @@
             <label for="number-of-people" class="title">Number of People</label>
             <div class="input-wrapper">
               <img src="images/icon-person.svg" alt="">
-              <input type="number" id="number-of-people" placeholder="0" min="1" required>
+              <input type="number" id="number-of-people" placeholder="0" min="1" required aria-label="amount of people">
             </div>
           </div>
         
@@ -76,7 +80,6 @@
             Tip Amount
             <span class="light-font">/ person</span>
           </p>
-
           <output id="tip-amount">$0.00</output>
         </div>
         <div class="result-row">
