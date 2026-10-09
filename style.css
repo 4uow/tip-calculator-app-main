@@ -59,8 +59,6 @@ fieldset {
     margin: 0;
 }
 
-
-
 .tip-options {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -68,9 +66,23 @@ fieldset {
     width: 100%;
 }
 
-.tip-options input[type="radio"] {
-    display: none;
+.tip-options label {
+    position: relative;
 }
+
+.tip-options input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+
 
 .tip-options label span{
     display: flex;
@@ -84,6 +96,11 @@ fieldset {
     font-size: 1rem;
     font-weight: 500;
 
+}
+
+.tip-options input[type="radio"]:focus + span {
+    background-color: #9FE8DF;
+    color: #00474B;
 }
 
 .tip-options #tip-custom {
@@ -238,4 +255,49 @@ fieldset {
     font-weight: 500;
     margin-bottom: 0.25rem;
     display: block;
+}
+
+@media (max-width: 620px) {
+    body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo {
+        margin: 3rem;
+        flex: 0 0 auto;
+    }
+
+    main {
+        min-width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+    }
+
+    #tip-form {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2rem;
+        min-height: 100%;
+    }
+
+    .tip-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .results {
+        flex: 0 1 auto;
+        padding-bottom: 2rem;
+    }
+
+    .form-fields {
+        flex: 0 1 auto;
+    }
+
 }

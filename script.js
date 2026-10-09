@@ -50,7 +50,7 @@ function updataCalculations() {
   errorMessage.hidden = !invalidPeople;
   errorMessage.textContent = people === 0 ? "Can't be zero" : "Must be a positive integer";
 
-  peopleWrapper.style.outline = invalidPeople ? "2px solid rgb(238, 17, 119)" : "none";
+  peopleWrapper.style.outline = invalidPeople ? "2px solid rgb(238, 17, 119)" : "";
 
   peopleInput.ariaInvalid = invalidPeople;
 
@@ -74,7 +74,7 @@ function updataCalculations() {
   if(
     !Number.isFinite(bill) || bill <= 0 || !Number.isFinite(people) || people <= 0 || !Number.isFinite(tipPercent) || tipPercent < 0
   ){
-    reurn;
+    return;
   }
 
   const tipPerPerson = (bill * tipPercent/ 100) / people;
